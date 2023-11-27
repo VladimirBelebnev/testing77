@@ -1,0 +1,235 @@
+// Products Styles
+
+.products {
+    width: 100%;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1.25rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    &__section {
+
+        &_map {
+            display: flex;
+            gap: 1.25rem;
+        }
+    }
+
+    &__column {
+
+        &_map-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: $semibold;
+        line-height: normal;
+        margin-bottom: 0.75rem;
+    }
+
+    &__subtitle {
+        margin-bottom: 0.75rem;
+    }
+
+    &__text {
+
+        &_big {
+            font-size: 1.125rem;
+            line-height: normal;
+        }
+    }
+
+    &__price {
+        font-size: 1.25rem;
+        font-weight: $bold;
+        line-height: normal;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+    }
+
+    &__input {
+        max-width: 33.125rem !important;
+    }
+
+    &__title-mini {
+        font-size: 1.25rem;
+        font-weight: $bold;
+        line-height: normal;
+        margin-bottom: 1.25rem;
+    }
+
+    &__tel {
+        font-weight: $bold;
+        line-height: 1.65rem;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap-reverse;
+    }
+
+    &__tape-btn {
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        border: 1px solid $primaryColor;
+        background: $white;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        &_yandex::before {
+            height: 1.75rem;
+            width: 8.61rem;
+            background-image: url("../images/yandex-icon.svg");
+        }
+
+        &_two-gis::before {
+            height: 1.7rem;
+            width: 5.15rem;
+            background-image: url("../images/two-gis-icon.svg");
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    &__list-item {
+        list-style-type: disc !important;
+    }
+
+    &__form-text {
+        margin-top: 2.5rem;
+        color: $darkBlack;
+        font-family: $secondFont;
+        font-size: 1.125rem;
+        font-weight: $normal;
+        line-height: normal;
+    }
+
+    &__column_map-text + &__column iframe {
+        height: 28.125rem;
+        width: 33.125rem;
+    }
+}
+
+.stub-navbar {
+    height: 23.6875rem;
+    background: $black;
+}
+
+.stub-form {
+    height: 35.125rem;
+    background: $black;
+}
+
+.input-1 {
+    height: 2.6875rem;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__input {
+        height: 100%;
+        width: 100%;
+        border-radius: 0.25rem 0rem 0rem 0.25rem;
+        border: 1px solid #32AF74;
+        padding: 0.75rem;
+        color: $black;
+        font-family: inherit;
+        font-size: 0.875rem;
+        line-height: normal;
+
+        &::placeholder {
+            color: #757575;
+        }
+    }
+
+    &__btn {
+        height: 100%;
+        color: $white;
+        font-size: 0.875rem;
+        font-weight: $bold;
+        line-height: normal;
+        background: $primaryGradient;
+        border-radius: 0rem 0.25rem 0.25rem 0rem;
+        padding: 0.75rem;
+    }
+}
+
+.navbar {
+    margin-bottom: 1.25rem;
+
+    &__text {
+        font-family: $secondFont;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 0.015rem;
+    }
+}
+
+// Products Media
+
+@media all and (max-width: 1200px) {
+
+    .products {
+
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__section {
+
+            &_map {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &__column_map-text + &__column iframe {
+            width: 100%;
+        }
+
+        &__tape-wrapper {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+// Media 400px
+
+@media all and (max-width: 500px) {
+
+    .products {
+
+        &__title {
+            font-size: 2rem;
+        }
+    }
+}
