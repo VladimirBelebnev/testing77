@@ -308,6 +308,13 @@ a:hover, button:hover {
   height: 28.125rem;
   width: 33.125rem;
 }
+.products__img-wrapper {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.products__img {
+  width: 100%;
+}
 
 .stub-navbar {
   height: 23.6875rem;

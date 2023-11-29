@@ -136,6 +136,15 @@
         height: 28.125rem;
         width: 33.125rem;
     }
+
+    &__img-wrapper {
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+
+    &__img {
+        width: 100%;
+    }
 }
 
 .stub-navbar {
